@@ -5,7 +5,7 @@
 define(['problem1'], function(problem1) {
     "use strict";
 
-    describe('problem1: Multiples of 3 and 5', function() {
+    describe('problem1: Multiples of 3 and 5 -', function() {
 
         it('should return the sum of all multiples of 3 and 5 for all natural numbers below 10 ', function() {
             var result = problem1(10);
