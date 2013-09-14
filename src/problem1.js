@@ -11,7 +11,7 @@ define(function () {
 
         for (; i < upperBound; i++) {
             if (i % 3 === 0 || i % 5 === 0) {
-                result = result + i;
+                result += i;
             }
         }
 
