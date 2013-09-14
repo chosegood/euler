@@ -6,8 +6,6 @@
 //By considering the terms in the Fibonacci sequence whose values do not exceed four million,
 //find the sum of the even-valued terms.
 
-//4613732
-
 define(['problem2'], function(problem2) {
     "use strict";
 
@@ -16,6 +14,11 @@ define(['problem2'], function(problem2) {
         it('should sum even value fibonacci numbers under 10', function() {
             var result = problem2(10);
             expect(result).toEqual(10);
+        });
+
+        it('should sum even value fibonacci numbers under 34', function() {
+            var result = problem2(34);
+            expect(result).toEqual(44);
         });
 
         it('should sum even value fibonacci numbers under 4,000,000', function() {

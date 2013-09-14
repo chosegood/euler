@@ -9,21 +9,18 @@ define(function () {
     "use strict";
 
     var problem2 = function (upperBound) {
-        var sum = 2,
-            fibonacci = [],
-            nextSequence;
+        var fibonacci = 2,
+            previousSequence = 1,
+            temp = 0,
+            sum = 0;
 
-        fibonacci.push(1);
-        fibonacci.push(2);
-
-        nextSequence = fibonacci[fibonacci.length-2] + fibonacci[fibonacci.length-1];
-
-        while (nextSequence < upperBound) {
-            fibonacci.push(nextSequence);
-            if (nextSequence % 2 === 0) {
-                sum += nextSequence;
+        while (fibonacci <= upperBound) {
+            if (fibonacci % 2 === 0) {
+                sum = sum + fibonacci;
             }
-            nextSequence = fibonacci[fibonacci.length-2] + fibonacci[fibonacci.length-1];
+            temp = fibonacci;
+            fibonacci = fibonacci + previousSequence;
+            previousSequence = temp;
         }
 
         return sum;
